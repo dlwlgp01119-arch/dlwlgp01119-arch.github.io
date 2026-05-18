@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>미래진로 AI 학과 추천 서비스</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진로 설계 플랫폼 - 프로필 등록</title>
+    <!-- CSS 폴더 안의 style.css 연결 -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">PathFit AI</div>
-    <nav class="nav">
-      <a href="#service">서비스 소개</a>
-      <a href="#features">주요 기능</a>
-      <a href="#start">진단 시작</a>
-    </nav>
-  </header>
+    <div class="container">
+        <!-- 사이드바: 메뉴 구성 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>CareerPath</h2>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active">📝 프로필/성적 입력</a>
+                <a href="#">📊 진로 분석 리포트</a>
+                <a href="#">🎯 추천 학과/직업</a>
+            </nav>
+        </aside>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <p class="badge">AI 기반 진로·학과 추천 플랫폼</p>
-        <h1>성적만이 아니라<br />나의 적성과 미래까지 보는 입시 정보 서비스</h1>
-        <p class="description">
-          PathFit AI는 학생의 성적, 관심 분야, 선호 가치, 진로 목표를 종합적으로 분석하여
-          나에게 맞는 학과와 진로 루트를 추천합니다.
-        </p>
-        <button id="startBtn">AI 진단 시작하기</button>
-      </div>
-      <div class="hero-image">
-        <img src="images/main-illustration.svg" alt="AI 진로 추천 일러스트" />
-      </div>
-    </section>
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="main-content">
+            <header>
+                <h1>학생 프로필 및 성적 등록</h1>
+                <p>진로 맞춤형 분석을 위해 정확한 정보를 입력해 주세요.</p>
+            </header>
 
-    <section id="service" class="section">
-      <h2>왜 필요한가요?</h2>
-      <p>
-        기존 입시 정보는 주로 성적에 맞는 대학을 찾는 데 집중되어 있습니다.
-        하지만 학생에게 정말 중요한 것은 대학 이름뿐 아니라 학과의 특성, 졸업 후 진로,
-        자신의 적성과 가치관에 맞는 선택입니다.
-      </p>
-    </section>
+            <section class="form-container">
+                <form id="careerForm">
+                    <!-- 기본 정보 섹션 -->
+                    <div class="form-section">
+                        <h3>🏫 기본 학적 정보</h3>
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="schoolName">학교명</label>
+                                <input type="text" id="schoolName" placeholder="예: 미래고등학교" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="grade">학년</label>
+                                <select id="grade" required>
+                                    <option value="">선택</option>
+                                    <option value="1">1학년</option>
+                                    <option value="2">2학년</option>
+                                    <option value="3">3학년</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="majorTrack">계열</label>
+                                <select id="majorTrack" required>
+                                    <option value="">선택</option>
+                                    <option value="general">일반(인문/자연)</option>
+                                    <option value="special">특성화/예체능</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 
-    <section id="features" class="cards">
-      <div class="card">
-        <h3>성적 기반 추천</h3>
-        <p>내신, 모의고사, 희망 지역 등을 바탕으로 지원 가능한 학과를 탐색합니다.</p>
-      </div>
-      <div class="card">
-        <h3>적성 질문 분석</h3>
-        <p>관심 과목, 좋아하는 활동, 중요하게 생각하는 가치 등을 AI가 분석합니다.</p>
-      </div>
-      <div class="card">
-        <h3>진로 루트 제공</h3>
-        <p>학과별 일반 진로와 특이 진로를 함께 제시해 선택의 폭을 넓힙니다.</p>
-      </div>
-    </section>
+                    <!-- 성적 정보 섹션 -->
+                    <div class="form-section">
+                        <h3>📊 주요 과목 내신 등급 (최근 학기)</h3>
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="scoreKorean">국어</label>
+                                <input type="number" id="scoreKorean" min="1" max="9" placeholder="1~9등급" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="scoreMath">수학</label>
+                                <input type="number" id="scoreMath" min="1" max="9" placeholder="1~9등급" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="scoreEnglish">영어</label>
+                                <input type="number" id="scoreEnglish" min="1" max="9" placeholder="1~9등급" required>
+                            </div>
+                        </div>
+                    </div>
 
-    <section id="start" class="survey">
-      <h2>간단 적성 진단</h2>
-      <p>아래 항목을 선택하면 추천 방향을 확인할 수 있습니다.</p>
-      <select id="interest">
-        <option value="">관심 분야를 선택하세요</option>
-        <option value="science">과학·실험</option>
-        <option value="people">사람 돕기·상담</option>
-        <option value="tech">기술·개발</option>
-        <option value="design">디자인·기획</option>
-      </select>
-      <button id="recommendBtn">추천 보기</button>
-      <div id="result" class="result"></div>
-    </section>
-  </main>
+                    <!-- 진로 관심사 섹션 -->
+                    <div class="form-section">
+                        <h3>🎯 희망 진로 분야</h3>
+                        <div class="input-group">
+                            <label for="interest">가장 관심 있는 분야나 직업을 적어주세요</label>
+                            <input type="text" id="interest" placeholder="예: AI 개발자, 마케터, 간호사 등">
+                        </div>
+                    </div>
 
-  <footer>
-    <p>© 2026 PathFit AI. 학생의 미래 선택을 돕는 AI 홈페이지</p>
-  </footer>
+                    <button type="submit" class="submit-btn">정보 저장 및 진로 분석하기</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
-  <script src="js/script.js"></script>
+    <!-- JS 폴더 안의 script.js 연결 -->
+    <script src="js/script.js"></script>
 </body>
 </html>
