@@ -1,10 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>창발 | 진로 기반 입시 정보 플랫폼</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">창발</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#problem">문제 인식</a></li>
+        <li><a href="#solution">서비스 소개</a></li>
+        <li><a href="#features">주요 기능</a></li>
+        <li><a href="#prototype">프로토타입</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
+    </nav>
+  </header>
 
-<html>
- <head>
-   <title>my home
-   </title>
- </head>
-  <body> 
-  안녕하세요. 지혜홈에 오신 것을 환영합니다. 
-  </body>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag">Career-based Admission Guide</p>
+        <h1>성적 너머의 가능성을<br />학과와 진로로 연결하다</h1>
+        <p class="hero-desc">
+          창발은 학생의 성적, 적성, 선호 가치, 학과 특성, 졸업 후 진로를 함께 분석해
+          대학 선택을 더 입체적으로 도와주는 AI 기반 입시 정보 플랫폼입니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="#solution" class="btn primary">서비스 알아보기</a>
+          <a href="#features" class="btn secondary">주요 기능 보기</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="images/main-illustration.svg" alt="진로와 학과를 연결하는 플랫폼 일러스트" />
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <p class="section-label">Problem</p>
+      <h2>왜 새로운 입시 정보가 필요할까요?</h2>
+      <div class="problem-grid">
+        <article class="card">
+          <span>01</span>
+          <h3>성적 중심의 선택</h3>
+          <p>대부분의 입시 정보는 합격 가능 대학과 점수 중심으로 제공되어 학과의 실제 특성을 파악하기 어렵습니다.</p>
+        </article>
+        <article class="card">
+          <span>02</span>
+          <h3>진로 정보의 단절</h3>
+          <p>학과 선택 이후 어떤 직업과 분야로 이어지는지 학생이 직접 찾아봐야 하는 불편함이 있습니다.</p>
+        </article>
+        <article class="card">
+          <span>03</span>
+          <h3>적성 반영 부족</h3>
+          <p>학생의 관심사, 선호 가치, 생활 방식이 학과 추천 과정에 충분히 반영되지 않습니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section solution" id="solution">
+      <div class="solution-text">
+        <p class="section-label">Solution</p>
+        <h2>창발은 학과 선택의 기준을 넓힙니다</h2>
+        <p>
+          창발은 대학 이름이나 합격 가능성만 보여주는 것이 아니라, 학생이 어떤 분야에서 성장할 수 있는지까지 보여줍니다.
+          학과별 인재상, 교육과정, 관련 진로, 특이 진로 루트를 함께 제공하여 학생이 스스로 납득할 수 있는 선택을 하도록 돕습니다.
+        </p>
+      </div>
+      <div class="solution-box">
+        <div>성적 분석</div>
+        <div>적성 질문</div>
+        <div>학과 특성</div>
+        <div>진로 연결</div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <p class="section-label">Features</p>
+      <h2>주요 기능</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>AI 적성 질문</h3>
+          <p>흥미, 가치관, 선호 과목, 활동 성향을 묻는 질문을 통해 학생에게 맞는 학과군을 제안합니다.</p>
+        </div>
+        <div class="feature-item">
+          <h3>학과별 진로 지도</h3>
+          <p>보편적인 진로뿐 아니라 융합 진로, 특수 직업, 공공기관 진출 가능성까지 한눈에 보여줍니다.</p>
+        </div>
+        <div class="feature-item">
+          <h3>비교형 정보 제공</h3>
+          <p>비슷한 이름의 학과라도 배우는 내용과 진로가 어떻게 다른지 비교할 수 있습니다.</p>
+        </div>
+        <div class="feature-item">
+          <h3>맞춤형 추천 결과</h3>
+          <p>성적, 관심 분야, 중요하게 생각하는 가치가 함께 반영된 추천 결과를 제공합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prototype" id="prototype">
+      <p class="section-label">Prototype</p>
+      <h2>서비스 이용 흐름</h2>
+      <div class="steps">
+        <div class="step"><b>1</b><p>성적 및 관심 분야 입력</p></div>
+        <div class="step"><b>2</b><p>적성·가치관 질문 응답</p></div>
+        <div class="step"><b>3</b><p>AI가 관련 학과 분석</p></div>
+        <div class="step"><b>4</b><p>학과·진로·대학 추천 결과 확인</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 창발 Project. 학생의 가능성을 발견하는 입시 정보 플랫폼.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
