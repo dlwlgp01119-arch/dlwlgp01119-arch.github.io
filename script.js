@@ -1,22 +1,43 @@
-document.getElementById('startBtn').addEventListener('click', function () {
-  document.getElementById('start').scrollIntoView({ behavior: 'smooth' });
-});
+document.getElementById('careerForm').addEventListener('submit', function(e) {
+    // 폼 제출 시 페이지 새로고침 방지
+    e.preventDefault();
 
-document.getElementById('recommendBtn').addEventListener('click', function () {
-  const interest = document.getElementById('interest').value;
-  const result = document.getElementById('result');
+    // 입력값 가져오기
+    const schoolName = document.getElementById('schoolName').value;
+    const grade = document.getElementById('grade').value;
+    const majorTrack = document.getElementById('majorTrack').value;
+    
+    const scoreKorean = parseInt(document.getElementById('scoreKorean').value);
+    const scoreMath = parseInt(document.getElementById('scoreMath').value);
+    const scoreEnglish = parseInt(document.getElementById('scoreEnglish').value);
+    
+    const interest = document.getElementById('interest').value;
 
-  if (!interest) {
-    result.textContent = '먼저 관심 분야를 선택해 주세요.';
-    return;
-  }
+    // 성적 유효성 검사 (1~9등급 사이인지 확인)
+    if (scoreKorean < 1 || scoreKorean > 9 || 
+        scoreMath < 1 || scoreMath > 9 || 
+        scoreEnglish < 1 || scoreEnglish > 9) {
+        alert('성적은 1등급에서 9등급 사이로 입력해 주세요.');
+        return;
+    }
 
-  const recommendations = {
-    science: '추천 방향: 화학, 생명과학, 약학, 식품공학 관련 학과',
-    people: '추천 방향: 교육학, 심리학, 사회복지, 간호학 관련 학과',
-    tech: '추천 방향: 컴퓨터공학, 인공지능, 데이터사이언스, 전자공학 관련 학과',
-    design: '추천 방향: 산업디자인, 콘텐츠기획, 미디어, UX/UI 관련 학과'
-  };
+    // 데이터 객체화 (추후 서버로 보내거나 분석에 사용 가능)
+    const studentData = {
+        school: schoolName,
+        grade: grade,
+        track: majorTrack,
+        scores: {
+            korean: scoreKorean,
+            math: scoreMath,
+            english: scoreEnglish
+        },
+        interest: interest
+    };
 
-  result.textContent = recommendations[interest];
+    console.log('저장된 학생 데이터:', studentData);
+    
+    // 성공 메시지
+    alert(`${schoolName} ${grade}학년 프로필 등록이 완료되었습니다!\n진로 분석을 시작합니다.`);
+    
+    // 여기에 다음 페이지로 이동하거나 결과를 보여주는 로직을 추가할 수 있습니다.
 });
