@@ -3,118 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>창발 | 진로 기반 입시 정보 플랫폼</title>
+  <title>미래진로 AI 학과 추천 서비스</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="header">
-    <nav class="navbar">
-      <div class="logo">창발</div>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#problem">문제 인식</a></li>
-        <li><a href="#solution">서비스 소개</a></li>
-        <li><a href="#features">주요 기능</a></li>
-        <li><a href="#prototype">프로토타입</a></li>
-      </ul>
-      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
+    <div class="logo">PathFit AI</div>
+    <nav class="nav">
+      <a href="#service">서비스 소개</a>
+      <a href="#features">주요 기능</a>
+      <a href="#start">진단 시작</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-text">
-        <p class="tag">Career-based Admission Guide</p>
-        <h1>성적 너머의 가능성을<br />학과와 진로로 연결하다</h1>
-        <p class="hero-desc">
-          창발은 학생의 성적, 적성, 선호 가치, 학과 특성, 졸업 후 진로를 함께 분석해
-          대학 선택을 더 입체적으로 도와주는 AI 기반 입시 정보 플랫폼입니다.
+        <p class="badge">AI 기반 진로·학과 추천 플랫폼</p>
+        <h1>성적만이 아니라<br />나의 적성과 미래까지 보는 입시 정보 서비스</h1>
+        <p class="description">
+          PathFit AI는 학생의 성적, 관심 분야, 선호 가치, 진로 목표를 종합적으로 분석하여
+          나에게 맞는 학과와 진로 루트를 추천합니다.
         </p>
-        <div class="hero-buttons">
-          <a href="#solution" class="btn primary">서비스 알아보기</a>
-          <a href="#features" class="btn secondary">주요 기능 보기</a>
-        </div>
+        <button id="startBtn">AI 진단 시작하기</button>
       </div>
-      <div class="hero-card">
-        <img src="images/main-illustration.svg" alt="진로와 학과를 연결하는 플랫폼 일러스트" />
+      <div class="hero-image">
+        <img src="images/main-illustration.svg" alt="AI 진로 추천 일러스트" />
       </div>
     </section>
 
-    <section class="section" id="problem">
-      <p class="section-label">Problem</p>
-      <h2>왜 새로운 입시 정보가 필요할까요?</h2>
-      <div class="problem-grid">
-        <article class="card">
-          <span>01</span>
-          <h3>성적 중심의 선택</h3>
-          <p>대부분의 입시 정보는 합격 가능 대학과 점수 중심으로 제공되어 학과의 실제 특성을 파악하기 어렵습니다.</p>
-        </article>
-        <article class="card">
-          <span>02</span>
-          <h3>진로 정보의 단절</h3>
-          <p>학과 선택 이후 어떤 직업과 분야로 이어지는지 학생이 직접 찾아봐야 하는 불편함이 있습니다.</p>
-        </article>
-        <article class="card">
-          <span>03</span>
-          <h3>적성 반영 부족</h3>
-          <p>학생의 관심사, 선호 가치, 생활 방식이 학과 추천 과정에 충분히 반영되지 않습니다.</p>
-        </article>
+    <section id="service" class="section">
+      <h2>왜 필요한가요?</h2>
+      <p>
+        기존 입시 정보는 주로 성적에 맞는 대학을 찾는 데 집중되어 있습니다.
+        하지만 학생에게 정말 중요한 것은 대학 이름뿐 아니라 학과의 특성, 졸업 후 진로,
+        자신의 적성과 가치관에 맞는 선택입니다.
+      </p>
+    </section>
+
+    <section id="features" class="cards">
+      <div class="card">
+        <h3>성적 기반 추천</h3>
+        <p>내신, 모의고사, 희망 지역 등을 바탕으로 지원 가능한 학과를 탐색합니다.</p>
+      </div>
+      <div class="card">
+        <h3>적성 질문 분석</h3>
+        <p>관심 과목, 좋아하는 활동, 중요하게 생각하는 가치 등을 AI가 분석합니다.</p>
+      </div>
+      <div class="card">
+        <h3>진로 루트 제공</h3>
+        <p>학과별 일반 진로와 특이 진로를 함께 제시해 선택의 폭을 넓힙니다.</p>
       </div>
     </section>
 
-    <section class="section solution" id="solution">
-      <div class="solution-text">
-        <p class="section-label">Solution</p>
-        <h2>창발은 학과 선택의 기준을 넓힙니다</h2>
-        <p>
-          창발은 대학 이름이나 합격 가능성만 보여주는 것이 아니라, 학생이 어떤 분야에서 성장할 수 있는지까지 보여줍니다.
-          학과별 인재상, 교육과정, 관련 진로, 특이 진로 루트를 함께 제공하여 학생이 스스로 납득할 수 있는 선택을 하도록 돕습니다.
-        </p>
-      </div>
-      <div class="solution-box">
-        <div>성적 분석</div>
-        <div>적성 질문</div>
-        <div>학과 특성</div>
-        <div>진로 연결</div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <p class="section-label">Features</p>
-      <h2>주요 기능</h2>
-      <div class="feature-list">
-        <div class="feature-item">
-          <h3>AI 적성 질문</h3>
-          <p>흥미, 가치관, 선호 과목, 활동 성향을 묻는 질문을 통해 학생에게 맞는 학과군을 제안합니다.</p>
-        </div>
-        <div class="feature-item">
-          <h3>학과별 진로 지도</h3>
-          <p>보편적인 진로뿐 아니라 융합 진로, 특수 직업, 공공기관 진출 가능성까지 한눈에 보여줍니다.</p>
-        </div>
-        <div class="feature-item">
-          <h3>비교형 정보 제공</h3>
-          <p>비슷한 이름의 학과라도 배우는 내용과 진로가 어떻게 다른지 비교할 수 있습니다.</p>
-        </div>
-        <div class="feature-item">
-          <h3>맞춤형 추천 결과</h3>
-          <p>성적, 관심 분야, 중요하게 생각하는 가치가 함께 반영된 추천 결과를 제공합니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section prototype" id="prototype">
-      <p class="section-label">Prototype</p>
-      <h2>서비스 이용 흐름</h2>
-      <div class="steps">
-        <div class="step"><b>1</b><p>성적 및 관심 분야 입력</p></div>
-        <div class="step"><b>2</b><p>적성·가치관 질문 응답</p></div>
-        <div class="step"><b>3</b><p>AI가 관련 학과 분석</p></div>
-        <div class="step"><b>4</b><p>학과·진로·대학 추천 결과 확인</p></div>
-      </div>
+    <section id="start" class="survey">
+      <h2>간단 적성 진단</h2>
+      <p>아래 항목을 선택하면 추천 방향을 확인할 수 있습니다.</p>
+      <select id="interest">
+        <option value="">관심 분야를 선택하세요</option>
+        <option value="science">과학·실험</option>
+        <option value="people">사람 돕기·상담</option>
+        <option value="tech">기술·개발</option>
+        <option value="design">디자인·기획</option>
+      </select>
+      <button id="recommendBtn">추천 보기</button>
+      <div id="result" class="result"></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2026 창발 Project. 학생의 가능성을 발견하는 입시 정보 플랫폼.</p>
+  <footer>
+    <p>© 2026 PathFit AI. 학생의 미래 선택을 돕는 AI 홈페이지</p>
   </footer>
 
   <script src="js/script.js"></script>
